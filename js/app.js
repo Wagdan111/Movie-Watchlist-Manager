@@ -334,7 +334,7 @@
   }
 
   function openModalForEdit(movie){
-    UI.editingId  = movie.id;
+    state.editingId  = movie.id;
     UI.modalTitle.textContent = "Edit Movie";
     UI.submitBtn.textContent  = "Save Changes";
 
@@ -371,6 +371,7 @@
   })
 
   UI.movieForm.addEventListener("submit" ,() =>{
+    debugger;
     const title = UI.fTitle.value.trim();
     const genre = UI.fGenre.value;
     const year = parseInt(UI.fYear.value , 10);
